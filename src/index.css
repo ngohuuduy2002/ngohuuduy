@@ -1,0 +1,256 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+} */
+.w-full {
+  width: 100%;
+}
+
+.loading {
+  animation: rotate360 2s linear infinite;
+}
+
+@keyframes rotate360 {
+  from {
+    transform: rotate(360deg);
+  }
+
+  to {
+    transform: rotate(0deg);
+  }
+}
+
+ #journal-scroll::-webkit-scrollbar {
+   width: 4px;
+   cursor: pointer;
+ }
+
+ #journal-scroll::-webkit-scrollbar-track {
+   background-color: rgba(229, 231, 235, var(--bg-opacity));
+   cursor: pointer;
+ }
+
+ #journal-scroll::-webkit-scrollbar-thumb {
+   cursor: pointer;
+   background-color: #a0aec0;
+ }
+
+.custom-scroll-content {
+  max-height: 550px;
+}
+
+.MuiTableHead-root .MuiTableCell-root {
+  background-color: #3f51b5;
+  color: white;
+}
+
+.custom-tab {
+  height: 250px;
+}
+
+.custom-tab * {
+  text-transform: none !important;
+}
+
+.custom-tab .Mui-selected {
+  background: #1976d2;
+  color: #fff !important;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.custom-tab .MuiBox-root {
+  color: #fff !important;
+}
+
+.custom-tab .MuiTabs-flexContainer button {
+  height: 33px;
+  padding: 0px 10px 0px 10px !important;
+  min-height: 0px !important;
+}
+
+.bg-login {
+  background-image: url(../public/bg-01.jpg);
+  background-size: cover;
+}
+
+.card-custom {
+  --font-color: #323232;
+    --font-color-sub: #666;
+    --bg-color: #fff;
+    --main-color: #323232;
+    --main-focus: #2d8cf0;
+    background: var(--bg-color);
+    border: 2px solid var(--main-color);
+    box-shadow: 4px 4px var(--main-color);
+    border-radius: 5px;
+}
+
+/* before adding the img to the div with the 
+"card-img" class, remove css styles 
+.card-img .img::before and .card-img .img::after,
+then set the desired styles for .card-img. */
+.card {
+  --font-color: #323232;
+  --font-color-sub: #666;
+  --bg-color: #fff;
+  --main-color: #323232;
+  --main-focus: #2d8cf0;
+  width: 330px;
+  height: 450px;
+  background: var(--bg-color);
+  border: 2px solid var(--main-color);
+  box-shadow: 4px 4px var(--main-color);
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 20px;
+  gap: 10px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.card:last-child {
+  justify-content: flex-end;
+}
+
+.card-img {
+  /* clear and add new css */
+  transition: all 0.5s;
+  display: flex;
+  justify-content: center;
+}
+
+.card-img .img {
+  /* delete */
+  transform: scale(1);
+  position: relative;
+  box-sizing: border-box;
+  width: 200px;
+  height: 200px;
+}
+
+.card-img .img::before {
+  /* delete */
+  content: '';
+  position: absolute;
+  width: 65px;
+  height: 110px;
+  margin-left: -32.5px;
+  left: 50%;
+  bottom: -4px;  border-radius: 0 0 4px 4px;
+  z-index: 2;
+}
+
+.card-img .img::after {
+  /* delete */
+  content: '';
+  position: absolute;
+  box-sizing: border-box;
+  width: 28px;
+  height: 28px;
+  margin-left: -14px;
+  left: 50%;
+  top: -13px;
+  transform: rotate(45deg);
+  z-index: 1;
+}
+
+.card-title {
+  font-size: 20px;
+  font-weight: 500;
+  text-align: center;
+  color: var(--font-color);
+}
+
+.card-subtitle {
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--font-color-sub);
+}
+
+.card-divider {
+  width: 100%;
+  border: 1px solid var(--main-color);
+  border-radius: 50px;
+}
+
+.card-footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-price {
+  font-size: 20px;
+  font-weight: 500;
+  color: var(--font-color);
+}
+
+.card-price span {
+  font-size: 20px;
+  font-weight: 500;
+  color: var(--font-color-sub);
+}
+
+.card-btn {
+  height: 35px;
+  background: var(--bg-color);
+  border: 2px solid var(--main-color);
+  border-radius: 5px;
+  padding: 0 15px;
+  transition: all 0.3s;
+}
+
+.card-btn svg {
+  width: 100%;
+  height: 100%;
+  fill: var(--main-color);
+  transition: all 0.3s;
+}
+
+.card-img:hover {
+  transform: translateY(-3px);
+}
+
+.card-btn:hover {
+  border: 2px solid var(--main-focus);
+}
+
+.card-btn:hover svg {
+  fill: var(--main-focus);
+}
+
+.card-btn:active {
+  transform: translateY(3px);
+}
+.frame iframe * {
+  width: 100% !important;
+  min-width: 900px;
+  overflow: visible;
+}
+.frame * {
+  width: 100% !important;
+}
+iframe * {
+  width: 100% !important;
+}
+iframe .pluginSkinLight div {
+  width: 100% !important;
+}
